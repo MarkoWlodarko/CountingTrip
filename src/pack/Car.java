@@ -1,11 +1,5 @@
 package pack;
 
-import java.util.ArrayList;
-import java.util.List;
-
-/**
- * Created by reynev on 3/20/17.
- */
 public class Car {
 
     private final double burning;

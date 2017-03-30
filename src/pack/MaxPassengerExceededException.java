@@ -1,8 +1,6 @@
 package pack;
 
-/**
- * Created by reynev on 3/20/17.
- */
+
 public class MaxPassengerExceededException extends Exception {
     private int maxPassengers;
 

@@ -1,8 +1,6 @@
 package pack;
 
-/**
- * Created by reynev on 3/20/17.
- */
+
 public class MaxLoadExceededException extends Throwable {
     private double maxLoad;
 
