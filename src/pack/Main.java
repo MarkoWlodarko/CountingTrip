@@ -12,7 +12,6 @@ public class Main{
     public static void main (String args[]) {
         Trip trip = new Trip(createMercedes(), 800);
 
-
         try {
             Voyager zanetka = new Voyager("Żanetka", 52.5, 50);
             Voyager marek = new Voyager("Marek", 74.3, 30);
