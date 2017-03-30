@@ -1,8 +1,5 @@
 package pack;
 
-/**
- * Created by Marek on 2017-03-22.
- */
 public class TripCostsCalculator {
 
     Trip trip = null;

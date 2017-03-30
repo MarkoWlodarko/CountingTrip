@@ -3,9 +3,6 @@ package pack;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * Created by Marek on 2017-03-18.
- */
 public class Trip {
 
     private Set<Voyager> voyagers = new HashSet<>();

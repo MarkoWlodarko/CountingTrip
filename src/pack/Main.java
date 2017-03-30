@@ -4,9 +4,6 @@ import pack.*;
 
 import java.io.IOException;
 
-/**
- * Created by Marek on 2017-03-18.
- */
 public class Main{
 
     public static void main (String args[]) {
