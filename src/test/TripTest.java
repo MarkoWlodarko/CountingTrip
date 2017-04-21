@@ -1,8 +1,12 @@
 package test;
 
 import org.junit.jupiter.api.Test;
-import pack.*;
-import static org.junit.jupiter.api.Assertions.*;
+
+import java.exception.MaxLoadExceededException;
+import java.exception.MaxPassengerExceededException;
+import java.service.Car;
+import java.pack.Trip;
+import java.pack.Voyager;
 
 /**
  * Created by reynev on 3/20/17.

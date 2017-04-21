@@ -1,4 +1,4 @@
-package pack;
+package java.pack;
 
 
 public class Voyager {

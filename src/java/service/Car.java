@@ -1,4 +1,4 @@
-package pack;
+package java.service;
 
 public class Car {
 
