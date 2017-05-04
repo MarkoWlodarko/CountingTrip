@@ -1,6 +1,6 @@
-package java.service;
+package MW.service;
 
-import java.pack.Trip;
+import MW.trip.Trip;
 
 public class TripCostsCalculator {
 
@@ -22,4 +22,12 @@ public class TripCostsCalculator {
         costs = trip.getDistance() * trip.costPerKilometer() + trip.getFares();
         return costs;
     }
+    public void doOverallCalculation(Trip trip){
+        System.out.println("Całkowity koszt podróży wyniósł: " + calcOverallCost() + " Złotych");
+    }
+
+    public void doCalculationsPerPassenger(Trip trip){
+        System.out.println("Koszt podróży na jedną osobę wyniósł: " + calcCostPerPassenger() + " Złotych");
+    }
+
 }

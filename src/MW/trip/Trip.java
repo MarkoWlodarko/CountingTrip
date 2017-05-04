@@ -1,9 +1,8 @@
-package java.pack;
+package MW.trip;
 
-import java.service.Car;
-import java.service.TripCostsCalculator;
-import java.exception.MaxLoadExceededException;
-import java.exception.MaxPassengerExceededException;
+import MW.exception.MaxLoadExceededException;
+import MW.service.Car;
+import MW.exception.MaxPassengerExceededException;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -59,15 +58,15 @@ public class Trip {
         return distance;
     }
 
-    public void doOverallCalculation(Trip trip){
-        TripCostsCalculator calculation = new TripCostsCalculator(trip);
+    /*public void doOverallCalculation(Trip java){
+        TripCostsCalculator calculation = new TripCostsCalculator(java);
         System.out.println("Całkowity koszt podróży wyniósł: " + calculation.calcOverallCost() + " Złotych");
     }
 
-    public void doCalculationsPerPassenger(Trip trip){
-        TripCostsCalculator calculation = new TripCostsCalculator(trip);
+    public void doCalculationsPerPassenger(Trip java){
+        TripCostsCalculator calculation = new TripCostsCalculator(java);
         System.out.println("Koszt podróży na jedną osobę wyniósł: " + calculation.calcCostPerPassenger() + " Złotych");
-    }
+    }*/
 
 
     public double costPerKilometer(){

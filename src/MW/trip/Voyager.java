@@ -1,4 +1,4 @@
-package java.pack;
+package MW.trip;
 
 
 public class Voyager {

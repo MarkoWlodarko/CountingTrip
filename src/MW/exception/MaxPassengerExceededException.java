@@ -1,4 +1,4 @@
-package trip.exception;
+package MW.exception;
 
 
 public class MaxPassengerExceededException extends Exception {
