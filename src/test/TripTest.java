@@ -1,19 +1,18 @@
 package test;
 
-import org.junit.jupiter.api.Test;
 
-import java.exception.MaxLoadExceededException;
-import java.exception.MaxPassengerExceededException;
-import java.service.Car;
-import java.pack.Trip;
-import java.pack.Voyager;
+import MW.exception.MaxLoadExceededException;
+import MW.exception.MaxPassengerExceededException;
+import MW.service.Car;
+import MW.trip.Trip;
+import MW.trip.Voyager;
 
 /**
  * Created by reynev on 3/20/17.
  */
 class TripTest {
 
-    @Test
+
     void addVoyager() throws MaxLoadExceededException, MaxPassengerExceededException {
         Trip trip = new Trip(createMercedes(), 43.8);
 
@@ -27,6 +26,8 @@ class TripTest {
         trip.addVoyager(marek);
         trip.addVoyager(agata);
         trip.addVoyager(marcin);
+
+
     }
 
     private static Car createMercedes() {

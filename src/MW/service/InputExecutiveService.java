@@ -17,6 +17,7 @@ public class InputExecutiveService implements InputService{
         BufferedReader br = new BufferedReader(isr);
         try {
             string = br.readLine();
+            if(string.indexOf(",")!=-1) { string = string.replaceAll(",","."); }
         } catch (IOException e) {
 
         } catch (NullPointerException e){

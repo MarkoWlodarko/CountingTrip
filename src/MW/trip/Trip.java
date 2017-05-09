@@ -37,6 +37,12 @@ public class Trip {
         }
     }
 
+    public void IfAllVoyagersWillGetIn(int numOfVoyagers) throws MaxPassengerExceededException{
+        if(numOfVoyagers > car.getMaxPassengers()) {
+            throw new MaxPassengerExceededException(car.getMaxPassengers(),numOfVoyagers);
+        }
+    }
+
     public Integer countNumOfPassengers(){
         return voyagers.size();
     }
