@@ -7,12 +7,17 @@ import MW.service.Car;
 import MW.trip.Trip;
 import MW.trip.Voyager;
 
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
 /**
  * Created by reynev on 3/20/17.
  */
 class TripTest {
 
-
+    @Test
+    @DisplayName("Custom Test")
     void addVoyager() throws MaxLoadExceededException, MaxPassengerExceededException {
         Trip trip = new Trip(createMercedes(), 43.8);
 
@@ -27,6 +32,15 @@ class TripTest {
         trip.addVoyager(agata);
         trip.addVoyager(marcin);
 
+        assertTrue(trip.countNumOfPassengers() <= createMercedes().getMaxLoad(),"Max load of passangers in car were not exceeded");
+        assertNotSame(zanetka, marek, "Passangers are not same");
+
+
+        assertAll("weight of voyagers",
+                () -> assertTrue(zanetka.getWeight() > 0),
+                () -> assertTrue(marek.getWeight() > 0),
+                () -> assertTrue(agata.getWeight() > 0),
+                () -> assertTrue(marcin.getWeight() > 0));
 
     }
 
