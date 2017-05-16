@@ -9,10 +9,9 @@ import java.io.InputStreamReader;
  */
 public class InputExecutiveService implements InputService{
 
-    private String string;
     @Override
     public String input() {
-        this.string = string;
+        String string = null;
         InputStreamReader isr = new InputStreamReader(System.in);
         BufferedReader br = new BufferedReader(isr);
         try {

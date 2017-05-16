@@ -12,15 +12,10 @@ public class Trip {
 
     private Car car;
 
-    public static final double FUEL_PRICE = 4.56;
 
     private double distance;
 
     private double fares = 0;
-
-    public void setDistance(double distance){
-        this.distance = distance;
-    }
 
     public Trip(Car car, double distance) {
         this.car = car;
@@ -37,7 +32,7 @@ public class Trip {
         }
     }
 
-    public void IfAllVoyagersWillGetIn(int numOfVoyagers) throws MaxPassengerExceededException{
+    public void willAllVoyagersGetIn(int numOfVoyagers) throws MaxPassengerExceededException{
         if(numOfVoyagers > car.getMaxPassengers()) {
             throw new MaxPassengerExceededException(car.getMaxPassengers(),numOfVoyagers);
         }
@@ -46,7 +41,6 @@ public class Trip {
     public Integer countNumOfPassengers(){
         return voyagers.size();
     }
-
 
     private double countExpectedLoad(Voyager voyager) {
         return countCurrentLoad() + voyager.getOverallWeight();
@@ -64,20 +58,8 @@ public class Trip {
         return distance;
     }
 
-    /*public void doOverallCalculation(Trip java){
-        TripCostsCalculator calculation = new TripCostsCalculator(java);
-        System.out.println("Całkowity koszt podróży wyniósł: " + calculation.calcOverallCost() + " Złotych");
-    }
-
-    public void doCalculationsPerPassenger(Trip java){
-        TripCostsCalculator calculation = new TripCostsCalculator(java);
-        System.out.println("Koszt podróży na jedną osobę wyniósł: " + calculation.calcCostPerPassenger() + " Złotych");
-    }*/
-
-
-    public double costPerKilometer(){
-        double costPK = car.getBurning() / 100 * FUEL_PRICE;
-        return costPK;
+    public double calcFuelPer100Km(){
+        return car.getBurning() / 100;
     }
 
     public void addFare(double fares){

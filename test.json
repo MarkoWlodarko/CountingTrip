@@ -1,0 +1,43 @@
+{
+  "Happy Path": {
+    "given": {
+      "trip": {
+        "distance": 800,
+        "car": {
+          "burning": 6.0,
+          "maxPassangers": 5,
+          "maxLoad": 500.0
+        },
+        "voyagers": [
+          {
+            "Name": "Marek",
+            "weight": 70.0,
+            "bagWeight": 20
+          },
+          {
+            "Name": "Żaneta",
+            "weight": 55.0,
+            "bagWeight": 20
+          },
+          {
+            "Name": "Marcin",
+            "weight": 70.0,
+            "bagWeight": 20
+          },
+          {
+            "Name": "Agata",
+            "weight": 55.0,
+            "bagWeight": 20
+          }
+        ]
+      }
+    }
+  },
+  "when": {
+    "action": "canclulateCost"
+  },
+  "then": {
+    "overallCost": 240,
+    "costPerPassenger": 60
+  }
+}

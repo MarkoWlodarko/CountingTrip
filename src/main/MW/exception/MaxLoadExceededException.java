@@ -2,6 +2,7 @@ package MW.exception;
 
 
 public class MaxLoadExceededException extends Throwable {
+
     private double maxLoad;
 
     private double expectedLoad;
@@ -9,7 +10,6 @@ public class MaxLoadExceededException extends Throwable {
     public MaxLoadExceededException(double maxLoad, double expectedLoad) {
         this.maxLoad = maxLoad;
         this.expectedLoad = expectedLoad;
-
     }
 
     public double getMaxLoad() {
