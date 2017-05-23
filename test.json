@@ -38,6 +38,94 @@
   },
   "then": {
     "overallCost": 240,
-    "costPerPassenger": 60
+    "costPerPassenger": 60,
+    "LOGGER": "message"
+  },
+  "Load exceeded": {
+    "given": {
+      "trip": {
+        "distance": 800,
+        "car": {
+          "burning": 6.0,
+          "maxPassangers": 5,
+          "maxLoad": 500.0
+        },
+        "voyagers": [
+          {
+            "Name": "Marek",
+            "weight": 70.0,
+            "bagWeight": 200
+          },
+          {
+            "Name": "Żaneta",
+            "weight": 55.0,
+            "bagWeight": 100
+          },
+          {
+            "Name": "Agata",
+            "weight": 55.0,
+            "bagWeight": 1000
+          }
+        ]
+      }
+    }
+  },
+  "when": {
+    "action": "fail at adding Agata"
+  },
+  "then": {
+    "maxLoad": 500,
+    "LOGGER": "message"
+  },
+  "Seat exceed": {
+    "given": {
+      "trip": {
+        "distance": 800,
+        "car": {
+          "burning": 6.0,
+          "maxPassangers": 5,
+          "maxLoad": 500.0
+        },
+        "voyagers": [
+          {
+            "Name": "Marek",
+            "weight": 70.0,
+            "bagWeight": 10
+          },
+          {
+            "Name": "Żaneta",
+            "weight": 55.0,
+            "bagWeight": 20
+          },
+          {
+            "Name": "Marcin",
+            "weight": 70.0,
+            "bagWeight": 10
+          },
+          {
+            "Name": "Agata",
+            "weight": 55.0,
+            "bagWeight": 10
+          },
+          {
+            "Name": "Rozowa Pantera",
+            "weight": 40.0,
+            "bagWeight": 10
+          },
+          {
+            "Name": "Zly brat blizniak Rozowej Patery",
+            "weight": 40.0,
+            "bagWeight": 10
+          }
+        ]
+      }
+    }
+  },
+  "when": {
+    "action": "fail at adding pinkPantherBrother"
+  },
+  "then": {
+    "maxPassangers": 5,
+    "LOGGER": "message"
   }
 }
